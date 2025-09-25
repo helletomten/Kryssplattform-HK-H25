@@ -3,7 +3,6 @@ import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import Post from "@/components/Post";
 import PostFormModal from "@/components/PostFormModal";
 import { PostData } from "@/types/post";
-import { getData } from "@/utils/local-storage";
 import { Stack } from "expo-router";
 import { useState } from "react";
 
@@ -23,9 +22,8 @@ export default function HomeScreen() {
           headerRight: () => (
             <Pressable
               onPress={() => {
-                //setIsModalVisible(true);
+                setIsModalVisible(true);
                 //storeData("Bippiti", "Boppipti");
-                getData("Bippiti");
               }}
             >
               <Text>Nytt innlegg</Text>
